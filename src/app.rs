@@ -364,7 +364,7 @@ impl eframe::App for TemplateApp {
 				ui.selectable_value(selected, moonlighter::Affinity::Yoyo, "Yoyo");
 			});
 
-			ui.label(format!("This means you should get moonshine No. {}", (138 - 57 + self.player_number() + self.affinity.offset()) % 138));
+			ui.label(format!("This means you should get moonshine No. {}", (138 + 57 - self.player_number() + self.affinity.offset()) % 138));
 
 
 			ui.separator();
